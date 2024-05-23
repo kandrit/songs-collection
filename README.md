@@ -2,6 +2,6 @@
 
 A sample WPF Application showcasing:
 
-* MVVM bindings on the UI
+* MVVM bindings
 * Inversion of Control (IoC) with Autofac
-* Unit testing mocks with Moq
+* Unit testing with Moq
