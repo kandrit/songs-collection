@@ -17,6 +17,20 @@
                     <ie:InvokeCommandAction Command="{Binding SelectedSongChangedCommand}" CommandParameter="{Binding ElementName=SongsCollectionListBox, Path=SelectedItem}"/>
                 </ie:EventTrigger>
             </ie:Interaction.Triggers>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0} - {1}">
+                                    <Binding Path="Artist"/>
+                                    <Binding Path="Title"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Grid.Column="1" Margin="12" VerticalAlignment="Center">
             <Label>Song Title</Label>
